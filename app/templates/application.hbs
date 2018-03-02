@@ -1,26 +1,51 @@
 <h1> Todo List </h1>
 <h3> What you gotta do?</h3>
-
 <form>
-<div>
-<input type="text" placeholder="add what you gotta do">
-</div>
-<div>
-<button>Add</button>
-</div>
+  <div>
+    <input type="text" placeholder="add what you gotta do">
+    <button>Add</button>
+  </div>
+ <br>
+ <br>
+
 </form>
+ {{!-- To iterate over a list of items, use the {{#each}} --}}
+<div class="container">
+  <div class="list-group">
+  
+    {{#each model as |task|}} 
+    <div class="row">
+      <div class="list-group-item col-md-8">
+        {{task.description}} 
+         <div class="col-md-4"> 
+         <button>
+          <span></span> Remove</button>
+          </div>
+      </div>    
+      </div>
+
+    {{/each}}
+  </div>
+</div>
+
 <br>
 <div>
-<button class="btn">All tasks </button>
-<button class="btn">Complete</button>
-<button class="btn">Incomplete</button>
+  <button class="btn">All tasks </button>
+  <button class="btn">Complete</button>
+  <button class="btn">Incomplete</button>
 </div>
 <br>
 
 <div class="list-group">
-<div class="list-group-item">
-<button class="btn btn-danger"> Delete</button>
+  <div class="list-group-item">
+    <button class="btn"> Delete</button>
+  </div>
 </div>
-</div>
+
+
+
+
+
+
 
 {{outlet}}
