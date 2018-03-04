@@ -2,12 +2,12 @@
 <h3> What you gotta do?</h3>
 <form>
   <div>
-    <input type="text" placeholder="add what you gotta do">
-    <button>Add</button>
+     add {{input value=todo}}
+    {{!-- <input type="text" placeholder="add what you gotta do"> --}}
+    <button class="btn" {{action (route-action 'save' todo)}} type="submit" >Add</button>
   </div>
  <br>
  <br>
-
 </form>
  {{!-- To iterate over a list of items, use the {{#each}} --}}
 <div class="container">
@@ -16,7 +16,7 @@
     {{#each model as |task|}} 
     <div class="row">
       <div class="list-group-item col-md-8">
-        {{task.description}} 
+        {{task.todo}} 
           
          <button>
           <span></span> Remove</button>
