@@ -17,6 +17,7 @@
     <div class="row">
       <div class="list-group-item col-md-8">
         {{task.todo}} 
+        
           
          <button class="btn" {{action (route-action 'delete' task)}}>Remove</button>
           
@@ -29,15 +30,15 @@
 
 <br>
 <div>
-  <button class="btn">All tasks </button>
-  <button class="btn">Complete</button>
-  <button class="btn">Incomplete</button>
+  <button class="btn" {{action, 'allTodo'}}> All tasks </button>
+  <button class="btn"{{action, 'completeTodo'}}> Complete</button>
+  <button class="btn" {{action, 'incompleteTodo'}}> Incomplete </button>
 </div>
 <br>
 
 <div class="list-group">
   <div class="list-group-item">
-    <button class="btn"> Delete</button>
+    <button class="btn"> Delete All</button>
   </div>
 </div>
 
