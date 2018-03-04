@@ -7,6 +7,7 @@ export default Route.extend({
    },
 
    actions: {
+
     save(todo) {
       this.get('store').createRecord('task', {
         todo,
@@ -16,7 +17,7 @@ export default Route.extend({
     delete(todo) {
       todo.deleteRecord();
       todo.save();
-    }
+    },
   }
 })
 

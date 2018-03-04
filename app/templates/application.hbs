@@ -1,6 +1,10 @@
 <h1> Todo List </h1>
 <h3> What you gotta do?</h3>
+
+ <div>
+
 <form>
+
   <div>
      add {{input value=todo}}
     {{!-- <input type="text" placeholder="add what you gotta do"> --}}
@@ -17,8 +21,12 @@
     <div class="row">
       <div class="list-group-item col-md-8">
         {{task.todo}} 
-        
-          
+        {{input type="checkbox"}}
+
+        {{!-- <input type="checkbox" checked={{todo.todoComp}} onclick={{action (route-action 'toggleTodo' todo) value="target.checked"}}> --}}
+        {{!-- {{input type="checkbox"
+          checked=todo.todoComp
+          update=(action (route-action 'toggleTodo' todo ))}} --}}
          <button class="btn" {{action (route-action 'delete' task)}}>Remove</button>
           
       </div>    
@@ -30,9 +38,9 @@
 
 <br>
 <div>
-  <button class="btn" {{action, 'allTodo'}}> All tasks </button>
-  <button class="btn"{{action, 'completeTodo'}}> Complete</button>
-  <button class="btn" {{action, 'incompleteTodo'}}> Incomplete </button>
+  <button class="btn" > All tasks </button>
+  <button class="btn" > Complete</button>
+  <button class="btn" > Incomplete </button>
 </div>
 <br>
 
@@ -40,6 +48,8 @@
   <div class="list-group-item">
     <button class="btn"> Delete All</button>
   </div>
+</div>
+
 </div>
 
 
