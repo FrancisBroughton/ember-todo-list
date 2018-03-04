@@ -14,8 +14,8 @@ export default Route.extend({
     },
   
     delete(todo) {
-      task.deleteRecord();
-      task.save();
+      todo.deleteRecord();
+      todo.save();
     }
   }
 })
