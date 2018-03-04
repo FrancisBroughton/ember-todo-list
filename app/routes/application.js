@@ -11,6 +11,11 @@ export default Route.extend({
       this.get('store').createRecord('task', {
         todo,
       }).save();
+    },
+  
+    delete(todo) {
+      task.deleteRecord();
+      task.save();
     }
   }
 })
