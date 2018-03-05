@@ -5,10 +5,7 @@
 
   <form class="containerinput">
     <div class=input>
-      
       {{input type="text" class="input" placeholder="Add a task" value=todo }}
-
-      {{!-- <input type="text" placeholder="Add a task"> --}}
       <button class="btn" {{action (route-action 'save' todo)}} type="submit" >Add</button>
     </div>
   <br>
@@ -34,9 +31,9 @@
 <br>
 <div class="container">
   <div class="button">
-  <button type="button" class="btn1"   {{action 'showAll'}} > {{fa-icon "camera"}} All tasks </button>
-  <button type="button"class="btn1" {{action 'showCompleted'}}>{{fa-icon "far fa-list"}} Complete</button>
-  <button type="button" class="btn1" {{action 'showIncomplete'}}>{{ fa-icon "fas fa-list"}} Incomplete </button>
+    <button type="button" class="btn1"   {{action 'showAll'}} > {{fa-icon "camera"}} All tasks </button>
+    <button type="button"class="btn1" {{action 'showCompleted'}}>{{fa-icon "far fa-list"}} Complete</button>
+    <button type="button" class="btn1" {{action 'showIncomplete'}}>{{ fa-icon "fas fa-list"}} Incomplete </button>
 </div>
 </div>
 </div>
