@@ -19,9 +19,16 @@
       <div class="list-group-item ">
        <span class="todo" >
           {{task.todo}}
-        </span>  
-        {{one-way-checkbox checked=todo.todoComp update=(action (route-action 'toggleTask' todo))}}
-         <button class="btnremove" {{action (route-action 'delete' task)}}>{{fa-icon "trash"}}</button>         
+        </span> 
+
+        <div class="checkdelete">
+          <span class="check">
+              {{one-way-checkbox checked=todo.todoComp update=(action (route-action 'toggleTask' todo))}} 
+              <button class="btnremove" {{action (route-action 'delete' task)}}>{{fa-icon "trash"}} Delete</button>
+          </span>  
+            
+        </div> 
+             
       </div>    
     </div>
     {{/each}}
@@ -29,6 +36,7 @@
 </div>
 
 <br>
+
 <div class="container">
   <div class="button">
     <button type="button" class="btn1"   {{action 'showAll'}} > {{fa-icon "camera"}} All tasks </button>

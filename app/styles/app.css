@@ -27,9 +27,26 @@ h3 {
   text-align: center;
   
 }
+
+.todo {
+  float: left;
+  padding-left: 44px;
+  font:'Helvetica Neue', Helvetica, Arial, sans-serif
+
+  
+}
+
+/* .check {
+  float: right;
+  padding-right: 90px;
+}
+.delete {
+  float: right;
+  padding-right: 35px;
+} */
 .row{
   margin: 2px;
-  padding: right
+  padding: left
   
 }
 span {
@@ -46,11 +63,6 @@ div .list-group {
 
  }
 
- div .list-group-item {
-  max-width: 5000px;
-  border: 2px green
- } 
-
 .container {
   text-align: center;
 }
@@ -59,13 +71,14 @@ div .list-group {
   background-color: rgb(233, 12, 12);
   border: none;
   color: white;
-  padding: 6px 10px;
+  padding: 4px 8px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 16px;
-  vertical-align: baseline;
-	font-family: inherit;
+  /* vertical-align: baseline; */
+  font-family: inherit;
+  
 }
 
 
@@ -76,14 +89,6 @@ div .list-group {
     padding: 10px 16px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 16px;
 }
-
-
-/* .center {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
-} */
