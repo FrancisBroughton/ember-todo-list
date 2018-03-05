@@ -1,17 +1,22 @@
 html,
-body {
+container main {
    margin: 0;
    padding: 0;
    margin: auto;
    width: 60%;
-   border: 3px solid green;
    padding: 5px;
-   background-color: rgb(180, 180, 180),
-  
+   background-color: rgb(180, 180, 180);
+  text-align: centre;
 }
+
+container {
+  width: 20em;
+}
+
 h1 { 
   text-align: center;
-  background-color: rgb(204, 52, 52),
+  font:'Helvetica Neue', Helvetica, Arial, sans-serif
+
 }
 
 h3 {
@@ -20,20 +25,51 @@ h3 {
 }
 .input {
   text-align: center;
+  
 }
-
-.list-group {
-  text-align: center;
+.row{
+  margin: 2px;
+  padding: right
+  
+}
+span {
+  text-align: right;
 
 }
+div .list-group {
+  line-height: 2em;
+
+
+ }
+ .input {
+  margin: auto;
+
+ }
+
+ div .list-group-item {
+  max-width: 5000px;
+  border: 2px green
+ } 
 
 .container {
   text-align: center;
 }
+.btnremove {
+  background-color: rgb(233, 12, 12);
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: baseline;
+	font-family: inherit;
+}
+
 
 .btn1 {
-
-    background-color: #4CAF50; /* Green */
+    background-color: rgb(48, 19, 216); 
     border: none;
     color: white;
     padding: 10px 16px;
@@ -42,6 +78,8 @@ h3 {
     display: inline-block;
     font-size: 16px;
 }
+
+
 /* .center {
   margin: auto;
   width: 50%;

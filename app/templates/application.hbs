@@ -5,8 +5,10 @@
 
   <form class="containerinput">
     <div class=input>
-      {{input value=todo}}
-      {{!-- <input type="text" placeholder="add what you gotta do"> --}}
+      {{!-- {{input value=todo}} --}}
+      {{input type="text" class="input" placeholder="Add a task" value=todo }}
+
+      {{!-- <input type="text" placeholder="Add a task"> --}}
       <button class="btn" {{action (route-action 'save' todo)}} type="submit" >Add</button>
     </div>
   <br>
@@ -17,10 +19,12 @@
   <div class="list-group">
     {{#each model as |task|}} 
     <div class="row">
-      <div class="list-group-item col-md-8">
-        {{task.todo}} 
+      <div class="list-group-item ">
+       <span class="todo" >
+          {{task.todo}}
+        </span>  
         {{one-way-checkbox checked=todo.todoComp update=(action (route-action 'toggleTask' todo))}}
-         <button class="btn btn-danger" {{action (route-action 'delete' task)}}>Remove</button>         
+         <button class="btnremove" {{action (route-action 'delete' task)}}>{{fa-icon "trash"}}</button>         
       </div>    
     </div>
 
@@ -31,9 +35,9 @@
 <br>
 <div class="container">
   <div class="button">
-  <button class="btn1" class="btn" {{action 'showAll'}} ><i class="far fa-th-list"></i> All tasks </button>
-  <button class="btn1"class="btn" {{action 'showCompleted'}}> Complete</button>
-  <button class="btn1"class="btn" {{action 'showIncomplete'}}> Incomplete </button>
+  <button type="button" class="btn1"  class="btn" {{action 'showAll'}} > {{fa-icon "camera"}} All tasks </button>
+  <button type="button"class="btn1"class="btn" {{action 'showCompleted'}}>{{fa-icon "far fa-list"}} Complete</button>
+  <button type="button" class="btn1"class="btn" {{action 'showIncomplete'}}>{{ fa-icon "fas fa-list"}} Incomplete </button>
 </div>
 </div>
 </div>
