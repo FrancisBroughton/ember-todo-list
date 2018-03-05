@@ -1,0 +1,50 @@
+html,
+body {
+   margin: 0;
+   padding: 0;
+   margin: auto;
+   width: 60%;
+   border: 3px solid green;
+   padding: 5px;
+   background-color: rgb(180, 180, 180),
+  
+}
+h1 { 
+  text-align: center;
+  background-color: rgb(204, 52, 52),
+}
+
+h3 {
+  text-align: center;
+  
+}
+.input {
+  text-align: center;
+}
+
+.list-group {
+  text-align: center;
+
+}
+
+.container {
+  text-align: center;
+}
+
+.btn1 {
+
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+/* .center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+} */

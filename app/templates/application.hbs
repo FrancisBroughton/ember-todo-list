@@ -1,56 +1,43 @@
+<div class="container main">
 <h1> Todo List </h1>
 <h3> What you gotta do?</h3>
 
- <div>
 
-<form>
-
-  <div>
-     add {{input value=todo}}
-    {{!-- <input type="text" placeholder="add what you gotta do"> --}}
-    <button class="btn" {{action (route-action 'save' todo)}} type="submit" >Add</button>
-  </div>
- <br>
+  <form class="containerinput">
+    <div class=input>
+      {{input value=todo}}
+      {{!-- <input type="text" placeholder="add what you gotta do"> --}}
+      <button class="btn" {{action (route-action 'save' todo)}} type="submit" >Add</button>
+    </div>
+  <br>
  <br>
 </form>
  {{!-- To iterate over a list of items, use the {{#each}} --}}
 <div class="container">
   <div class="list-group">
-  
     {{#each model as |task|}} 
     <div class="row">
       <div class="list-group-item col-md-8">
         {{task.todo}} 
-        {{input type="checkbox"}}
-
-        {{!-- <input type="checkbox" checked={{todo.todoComp}} onclick={{action (route-action 'toggleTodo' todo) value="target.checked"}}> --}}
-        {{!-- {{input type="checkbox"
-          checked=todo.todoComp
-          update=(action (route-action 'toggleTodo' todo ))}} --}}
-         <button class="btn" {{action (route-action 'delete' task)}}>Remove</button>
-          
+        {{one-way-checkbox checked=todo.todoComp update=(action (route-action 'toggleTask' todo))}}
+         <button class="btn btn-danger" {{action (route-action 'delete' task)}}>Remove</button>         
       </div>    
-      </div>
+    </div>
 
     {{/each}}
   </div>
 </div>
 
 <br>
-<div>
-  <button class="btn" > All tasks </button>
-  <button class="btn" > Complete</button>
-  <button class="btn" > Incomplete </button>
+<div class="container">
+  <div class="button">
+  <button class="btn1" class="btn" {{action 'showAll'}} ><i class="far fa-th-list"></i> All tasks </button>
+  <button class="btn1"class="btn" {{action 'showCompleted'}}> Complete</button>
+  <button class="btn1"class="btn" {{action 'showIncomplete'}}> Incomplete </button>
 </div>
-<br>
-
-<div class="list-group">
-  <div class="list-group-item">
-    <button class="btn"> Delete All</button>
-  </div>
+</div>
 </div>
 
-</div>
 
 
 

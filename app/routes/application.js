@@ -18,6 +18,12 @@ export default Route.extend({
       todo.deleteRecord();
       todo.save();
     },
+
+    toggleTask(todo) {
+      let todoComp = todo.get('todoComp');
+      todo.set = ('todoComp', !todoComp);
+      todo.save();
+    }
   }
 })
 
