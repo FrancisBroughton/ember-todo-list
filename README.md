@@ -1,60 +1,33 @@
-<<<<<<< HEAD
-# todo-list
+# ember-todo-list
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This todo project is the first attempt with EmberJS.
 
-## Prerequisites
+The Working componants are that you can add and remove items to the list.
 
+I had a few issues getting the completed/incomplete buttons to render items on the list that are ticked when complete or not complete.
+
+The aim is to figure our why the incomplete and complete buttons do not render the correct outcome.
+
+# Prerequisites
 You will need the following things properly installed on your computer.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+Git
+Node.js (with npm)
+Ember CLI
 
-## Installation
 
-* `git clone <repository-url>` this repository
-* `cd todo-list`
-* `npm install`
+# Installing and Running
 
-## Running / Development
+-[x] git clone the repositary.
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+-[x] You will then need to change into the correct folder by typing cd todo-list in the terminal
 
-### Code Generators
+-[x] npm install
 
-Make use of the many generators for code, try `ember help generate` for more details
+-[x] to start the prject type ember s in the terminal. You can see the app on http://localhost:4200/
 
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-=======
-# ember-todo-list
->>>>>>> 9dc5b0d0c953fc3c176f3dedf35b4c03c0b253e5
+# Built with
+* ember-cli-build
+* ember-cli-mirage
+* ember-one-way-controls
+* Bootstrap
